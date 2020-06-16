@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Meta data -->
+	<meta charset="utf=8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<!-- Title -->
+	<title>Fitness App</title>
+	
+	<!-- CSS -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	
+	<link href="css/leanmodal.css" rel='stylesheet' type='text/css' />
+	
+	<link href="css/circle-process.css" rel='stylesheet' type='text/css' />	
+	
+	<link href="css/styles.css" rel='stylesheet' type='text/css' />
+	<link href="css/dashboard.css" rel='stylesheet' type='text/css' />
+	<link href="css/forms.css" rel='stylesheet' type='text/css' />
+	
+	<!-- JS -->
+	<script src="js/jquery-2.js" type="text/javascript"></script>
+	<script src="js/bootstrap.js" type="text/javascript"></script>
+	
+	<script src="js/leanmodal.js" type="text/javascript"></script>
+	<script src="js/parallax.js" type="text/javascript"></script>
+	
+	<script src="js/circle-progress.js" type="text/javascript"></script>
+	<script src="js/modules.js" type="text/javascript"></script>
+	
+	<script src="js/navbar.js" type="text/javascript"></script>
+	<script src="js/form.js" type="text/javascript"></script>
+	<script src="js/bmi.js"></script>
+	
+	<!-- Script for parallax effect -->
+	<script type="text/javascript">
+    $(function(){
+        if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+        $('#ios-notice').removeClass('hidden');
+          $('.parallax-container').height( $(window).height() * 0.5 | 0 );
+        } else {
+        $(window).resize(function(){
+            var parallaxHeight = Math.max($(window).height() * 0.7, 200) | 0;
+            $('.parallax-container').height(parallaxHeight);
+        }).trigger('resize');
+        }
+    });
+    </script>
+	
+	<!-- Scroll to top when page loads -->
+	<script type="text/javascript">
+	$(window).load(function()
+	{
+		$("html, body").animate({scrollTop: 0}, 1000);
+	});
+    </script>
+    <header>
+		<!-- Navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand">Fitness App</a>
+				</div>
+				<div class="btn-group" role="group" style="width: 100%;" aria-label="Button group with nested dropdown">
+						<button class="btn"><i class="fa fa-home"></i> <a href="index.html">Home</a></button>
+                        <button class="btn"><i class="fa fa-clipboard"></i><a href="30_days_workout.html"> 30 days Workout</a></button>
+                        <button class="btn"><i class="fa fa-video-camera"></i><a href= "video.html">Videos</a></button>
+                        <button class="btn"><i class="fa fa-calendar"><a href="schedule.html"> Calendar</a></i></button>
+                        <button class="btn"><i class="fa fa-"><a href="http://localhost:3000/">Signin</a></button>
+            
+					</ul>
+                        </div>
+                        </div>
+			</div>
+		</nav>
+	</header>
+	
+	<main>
+	
+</head>
+<body>
+	
+	
+	<div class="parallax-container" data-parallax="scroll" data-position="top" data-bleed="10" data-image-src="img/pic5.jpg" data-natural-width="2500" data-natural-height="1668"></div>
+		
+		<section id="welcome">
+			<div class="welcome">
+				<h2>Welcome</h2>
+				<p>Welcome to Fitness App, the best way to track your exercise
+				and compete with your friends. With Fitness App, you'll be 
+				given the ability to record your workout time and compare
+				those with your friends. Challenge yourself and those 
+				around you to get fit, in a fun and interactive way.</p>
+			</div>
+		</section>
+            
+		<!-- Actual page content -->
+		<div class="parallax-container" data-parallax="scroll" data-position="top" data-bleed="10" data-image-src="img/biking.jpeg" data-natural-width="1600" data-natural-height="1000"></div>
+
+		<div class="bmi">
+		<h2>
+			BMI Calculator
+				</h2>
+				<p>
+				Enter your weight in pounds:
+				<input type="text" id="weight">
+				</p>
+				
+				<p>
+				Enter your height in inches:
+				<input type="text" id="height">
+				</p>
+				
+				<input type="button" onclick="bmiCalculator()" value="calculate">
+				<p id="output" ></p> 
+	</div>
+		<div class="parallax-container" data-parallax="scroll" data-position="top" data-bleed="10" data-image-src="img/pic4.jpg" data-natural-width="1600" data-natural-height="700"></div>
+	
+	</main>
+	<div class="card">
+		<div class="card-body">
+		<h4 class="card-title">CHECK THE NEAREST PARK TO YOU!</h4>
+		<a href="map.html">
+			<img src="img/map.jpg" class="center2" alt="map" style="width:600px;height:200px;border:100px;">
+		</a>	</div>
+		<section id="contact">
+			<div class="container">
+				<h2>Contact</h2>
+				<p>Got any questions? Having some problems signing up? </a> for help.</p>
+				
+				<!-- Dummy email form -->
+				<form id="contact-form"  method="post">
+					<div class="field">
+						<label>Name</label>
+						<input type="text" name="Name" maxlength="50" required />
+					</div>
+					
+					<div class="field">
+						<label>Email</label>
+						<input type="email" name="Email" maxlength="50" required />
+					</div>
+					
+					<div class="field">
+						<label>Write your message here</label>
+						<textarea minlength="20" maxlength="100" name="Message"></textarea>
+					</div>
+					
+					<button type="submit" class="button button-block"/>Send Message</button>
+				</form>
+			</div>
+		</section>
+	<footer class="footer-section">
+		<div class="copyright-text">
+			Copyright &copy;<script>
+				document.write(new Date().getFullYear());
+			</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i></a>
+			</p>
+			</p>
+			<div class="footer-social">
+				<a href="https://en-gb.facebook.com/login/"><i class="fa fa-facebook" style="font-size:40px"></i></a>
+				<a href="https://accounts.spotify.com/en/login?continue=https"><i class="fa fa-spotify"
+						style="font-size:40px" ></i></a>
+			</div>
+		</div>
+		</div>
+	</footer>
+</body>
+</html>
